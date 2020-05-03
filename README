@@ -1,0 +1,82 @@
+			 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+				 README
+
+
+			  Michaël Chirmeni Boujike
+			 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+GRAPGT-ParaMiner is a generic, parallel algorithm for mining closed frequent
+patterns in transactional datasets when the gradual threshold is taken into account.
+The gradual threshold consider here are : 
+ - coefficient of variation (cv);
+ - standard deviation (sd);
+ - and standard deviation of deviations (st).
+
+
+1 Quick start
+═════════════
+
+ Download ParaMiner
+──────────────────────
+
+  here:
+  [https://github.com/Chirmeni/GRAPGT-Paraminer]
+
+
+ Extract the archive
+───────────────────────
+
+  ╭────
+  │ tar xzvf GRAPGT-ParaMiner-1.0.tgz
+  ╰────
+
+
+ Build GRAPGT-ParaMiner
+───────────────────
+
+  ╭────
+  │ cd GRAPGT-ParaMiner
+  │ ./configure 
+  │ make
+  │ make install 
+  ╰────
+
+  Default install directory is /usr/local. You can specify a different
+  install directory with –prefix:
+  ╭────
+  │ ./configure --prefix=<path/to/install_dir>
+  ╰────
+
+  If you do not wish to install, GRAPGT-ParaMiner executable files can be found
+  in the <paraminer>/src/ directory.
+
+
+ Run GRAPGT-ParaMiner
+─────────────────
+
+  ╭────
+  │ ./paraminer_gradual <dataset_file> <minSupp> <k1> <k2> <gradual_threshold> -t <number_of_threads> > <output_file>
+  ╰────
+  where :
+	- dataset_file : numerical database for test algorithm;
+	- minSupp : support threshold;
+	- k1 and k2 are constants;
+	- gradual_threshold : gradual threshold selected among cv, sd and st;
+	- number_of_threads : number of threads;
+	- output_file : output file that contains frequent gradual patterns.
+
+Exemple :   
+  ╭────
+  │ ./paraminer_gradual test.dat 0.2 1 0 cv -t 2 > result.out
+  ╰────  
+  
+  
+ Authors and license
+═════════════════════
+
+  Authors:
+  • Michaël Chirmeni Boujike
+  • Jerry Lonlac
+  • Norbert Tsopze
+  • Engelbert Mephu Nguifo
