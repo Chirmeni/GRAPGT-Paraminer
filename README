@@ -56,7 +56,7 @@ The gradual threshold consider here are :
 ─────────────────
 
   ╭────
-  │ ./paraminer_gradual <dataset_file> <minSupp> <k1> <k2> <gradual_threshold> -t <number_of_threads> > <output_file>
+  │ ./paraminer_graduals <dataset_file> <minSupp> <k1> <k2> <gradual_threshold> -t <number_of_threads> > <output_file>
   ╰────
   where :
 	- dataset_file : numerical database for test algorithm;
@@ -68,7 +68,7 @@ The gradual threshold consider here are :
 
 Exemple :   
   ╭────
-  │ ./paraminer_gradual test.dat 0.2 1 0 cv -t 2 > result.out
+  │ ./paraminer_graduals test.dat 0.2 1 0 cv -t 2 > result.out
   ╰────  
   
   
