@@ -17,7 +17,7 @@ The gradual threshold consider here are :
 1 Quick start
 ═════════════
 
- Download ParaMiner
+ Download GPoID-ParaMiner
 ──────────────────────
 
   here:
@@ -66,7 +66,7 @@ The gradual threshold consider here are :
 	- number_of_threads : number of threads;
 	- output_file : output file that contains frequent gradual patterns.
 
-Exemple :   
+Example :   
   ╭────
   │ ./paraminer_graduals test.dat 0.2 1 0 cv -t 2 > result.out
   ╰────  
